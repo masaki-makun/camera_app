@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Camera App</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body class="page1_body">
+    <div class="container">
+      <h1 class="title">Camera App</h1>
+      <div class="text-wrap">
+        <p class="desc">ボタンをクリックするとカメラが起動します。</p>
+      </div>
+
+      <div class="content">
+        <div class="button-wrap">
+          <button type="button" id="video_start_button1" class="camera_button">
+            In Camera
+          </button>
+          <button type="button" id="video_start_button2" class="camera_button">
+            Out Camera
+          </button>
+          <button type="button" id="video_stop_button" class="camera_button">
+            Stop
+          </button>
+        </div>
+        <div class="camera-wrap">
+          <video
+            id="camera"
+            class="camera"
+            width="400"
+            height="250"
+            autoplay
+            playsinline
+          ></video>
+        </div>
+        <div class="text-wrap2">
+          <div class="status-text-head-wrap">
+            <h4 class="status">Status:</h4>
+          </div>
+          <div class="status-text-toggle-wrap">
+            <p class="text in-text">In Camera Active</p>
+            <p class="text out-text">Out Camera Active</p>
+            <p class="text off-text">Stopped</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js" defer></script>
+    <script></script>
+  </body>
+</html>

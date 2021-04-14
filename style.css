@@ -1,0 +1,295 @@
+/*base*/
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Arial" sans-serif;
+}
+
+/*font*/
+.title {
+  color: orange;
+  font-weight: bold;
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+  padding: 30px 10px 60px 10px;
+}
+
+.desc {
+  color: #fff;
+  font-weight: 300;
+  font-size: 13px;
+  margin: 0;
+}
+
+.text {
+  display: none;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  color: #fff;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.status {
+  color: #fff;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  width: 70px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text-active {
+  opacity: 1;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  -webkit-animation: textActive 3s ease infinite;
+          animation: textActive 3s ease infinite;
+}
+
+/*button*/
+.camera_button {
+  padding: 10px 20px;
+  background: #fff;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.camera_button:hover {
+  opacity: 0.7;
+  outline: none;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+/*main*/
+.container {
+  background: rgba(0, 0, 0, 0.85);
+  max-height: 100%;
+  height: 100%;
+  padding: 30px 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 2rem;
+}
+
+.container.container-active {
+  background: black;
+}
+
+.text-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0 40px 0;
+}
+
+.button-wrap {
+  grid-gap: 1rem;
+  background: #6d6d6d;
+  padding: 20px 0;
+  border-radius: 20px;
+  width: 400px;
+  height: 30px;
+}
+
+.text-wrap2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  grid-gap: 1rem;
+  background: #707070;
+  padding: 20px 0;
+  border-radius: 20px;
+  width: 400px;
+  height: 30px;
+}
+
+/*video*/
+.video-active {
+  border: none;
+  border-radius: 10px;
+  -webkit-animation: videoActive 3s ease-in-out infinite;
+          animation: videoActive 3s ease-in-out infinite;
+}
+
+.button-active {
+  opacity: 1;
+  background: orange;
+  color: #fff;
+  pointer-events: none;
+}
+
+.camera {
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 20px 2px rgba(85, 85, 85, 0.8);
+          box-shadow: 0px 2px 20px 2px rgba(85, 85, 85, 0.8);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  background: #000;
+}
+
+.camera-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.camera-wrap,
+.button-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*animation*/
+@-webkit-keyframes videoActive {
+  0% {
+    -webkit-box-shadow: 0px 3px 40px 20px rgba(152, 152, 152, 0.7);
+            box-shadow: 0px 3px 40px 20px rgba(152, 152, 152, 0.7);
+  }
+  50% {
+    -webkit-box-shadow: 0px 6px 60px 80px rgba(152, 152, 152, 0.4);
+            box-shadow: 0px 6px 60px 80px rgba(152, 152, 152, 0.4);
+  }
+  100% {
+    -webkit-box-shadow: 0px 3px 40px 20px rgba(152, 152, 152, 0.7);
+            box-shadow: 0px 3px 40px 20px rgba(152, 152, 152, 0.7);
+  }
+}
+@keyframes videoActive {
+  0% {
+    -webkit-box-shadow: 0px 3px 40px 20px rgba(152, 152, 152, 0.7);
+            box-shadow: 0px 3px 40px 20px rgba(152, 152, 152, 0.7);
+  }
+  50% {
+    -webkit-box-shadow: 0px 6px 60px 80px rgba(152, 152, 152, 0.4);
+            box-shadow: 0px 6px 60px 80px rgba(152, 152, 152, 0.4);
+  }
+  100% {
+    -webkit-box-shadow: 0px 3px 40px 20px rgba(152, 152, 152, 0.7);
+            box-shadow: 0px 3px 40px 20px rgba(152, 152, 152, 0.7);
+  }
+}
+@-webkit-keyframes textActive {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: white;
+  }
+  50% {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: white;
+  }
+}
+@keyframes textActive {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: white;
+  }
+  50% {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: white;
+  }
+}/*# sourceMappingURL=style.css.map */
